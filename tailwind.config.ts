@@ -15,7 +15,7 @@ const config = {
       NunitoBold: ['"Nunito"', 'sans-serif', 'Bold', '900'],
     },
     screens: {
-      xs: '400px',
+      xs: '300px',
       sm: '480px',
       md: '768px',
       lg: '976px',

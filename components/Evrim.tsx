@@ -10,9 +10,9 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, X } from 'lucide-react';
+import { Check, Minus, Plus, X } from 'lucide-react';
 
-function Evrim({ setHesap, hesap }: any) {
+function Evrim({ setEvrim, evrim }: any) {
   const [btnClick, setBtnClick] = useState(false);
   return (
     <Card className="w-full mb-2 rounded-xl">
@@ -27,18 +27,27 @@ function Evrim({ setHesap, hesap }: any) {
         <div className="flex lg:flex-row sm:flex-col items-center  p-2 gap-2 w-full ">
           <Button
             variant="outline"
-            className="lg:w-40 sm:w-full"
+            className="w-full rounded-xl"
             onClick={() => {
-              setHesap(hesap + 8);
+              setEvrim(evrim + (!btnClick ? +8 : -8));
+
+              //setHesap(hesap + 8);
               setBtnClick(!btnClick);
             }}
-            disabled={btnClick}
+            // disabled={btnClick}
           >
-            <Check />
-            Evet
+            {!btnClick ? (
+              <span className="text-green-500 flex justify-center items-center font-NunitoBold font-bold">
+                <Plus /> Ekle
+              </span>
+            ) : (
+              <span className="text-red-500 flex justify-center items-center font-NunitoBold font-bold">
+                <Minus /> Çıkar
+              </span>
+            )}
           </Button>
 
-          <Button
+          {/* <Button
             variant="outline"
             className="lg:w-40 sm:w-full"
             onClick={() => setHesap(hesap + 0)}
@@ -46,7 +55,7 @@ function Evrim({ setHesap, hesap }: any) {
           >
             <X />
             Hayır
-          </Button>
+          </Button> */}
         </div>
       </CardContent>
     </Card>

@@ -9,10 +9,12 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star } from 'lucide-react';
+import { Minus, Plus, Star } from 'lucide-react';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-function Panda({ setHesap, hesap }: any) {
-  const [btnClick, setBtnClick] = useState(false);
+function Panda({ setPanda, panda }: any) {
+  const [value, setValue] = useState('0');
   return (
     <Card className="w-full mb-2 rounded-xl">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2">
@@ -30,68 +32,85 @@ function Panda({ setHesap, hesap }: any) {
         </div>
 
         <div className="flex lg:w-full sm:w-3/4 xs:w-3/4 flex-col gap-2 ">
-          <Button
-            variant="outline"
-            className="lg:w-80 sm:w-full font-bold flex lg:flex-row sm:flex-col xs:flex-col justify-start lg:h-10 sm:h-18 xs:h-[64px]"
-            onClick={() => {
-              setHesap(hesap + 0);
-              setBtnClick(!btnClick);
-            }}
-            disabled={btnClick}
-          >
-            Hayır
-          </Button>
-
-          <Button
-            variant="outline"
-            className="lg:w-80 sm:w-full font-bold flex lg:flex-row sm:flex-col xs:flex-col gap-2 lg:h-10 sm:h-18 xs:h-[64px] justify-start"
-            onClick={() => {
-              setHesap(hesap + 5);
-              setBtnClick(!btnClick);
-            }}
-            disabled={btnClick}
-          >
-            <div className="flex">
-              <Star className="text-red-500" />
+          <RadioGroup defaultValue="option-zero">
+            <div className="flex items-center space-x-2 border-b-2">
+              <RadioGroupItem
+                value="0"
+                id="option-zero"
+                onClick={(e: any) => {
+                  setValue(e.target.value);
+                  setPanda(parseInt(e.target.value));
+                }}
+                checked={value === '0'}
+                className="w-6 h-6"
+              />
+              <Label htmlFor="option-zero" className="text-lg font-bold ">
+                Uyandırmadım.
+              </Label>
             </div>
-            - Kırmızı 1 Yıldız
-          </Button>
-          <Button
-            variant="outline"
-            className="lg:w-80 sm:w-full font-bold flex lg:flex-row sm:flex-col xs:flex-col gap-2 lg:h-10 sm:h-18 xs:h-[64px] justify-start"
-            onClick={() => {
-              setHesap(hesap + 15);
-              setBtnClick(!btnClick);
-            }}
-            disabled={btnClick}
-          >
-            <div className="flex">
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
+            <div className="flex items-center space-x-2 border-b-2">
+              <RadioGroupItem
+                value="5"
+                id="option-one"
+                onClick={(e: any) => {
+                  setValue(e.target.value);
+                  setPanda(parseInt(e.target.value));
+                }}
+                checked={value === '5'}
+                className="w-6 h-6"
+              />
+              <Label htmlFor="option-one" className="text-lg font-bold flex">
+                <div className="flex">
+                  <Star className="text-red-500" />
+                </div>
+                <span>- Kırmızı 1 Yıldız</span>
+              </Label>
             </div>
-            - Kırmızı 4 Yıldız
-          </Button>
-          <Button
-            variant="outline"
-            className="lg:w-80 sm:w-full font-bold flex lg:flex-row sm:flex-col xs:flex-col gap-2 lg:h-10 sm:h-18 xs:h-[64px] justify-start"
-            onClick={() => {
-              setHesap(hesap + 30);
-              setBtnClick(!btnClick);
-            }}
-            disabled={btnClick}
-          >
-            <div className="flex">
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
-              <Star className="text-red-500" width={20} height={20} />
+            <div className="flex items-center space-x-2 border-b-2 ">
+              <RadioGroupItem
+                value="15"
+                id="option-two"
+                onClick={(e: any) => {
+                  setValue(e.target.value);
+                  setPanda(parseInt(e.target.value));
+                }}
+                checked={value === '15'}
+                className="w-6 h-6"
+              />
+              <Label htmlFor="option-two" className="text-lg font-bold flex">
+                <div className="flex">
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                </div>
+                <span>- Kırmızı 4 Yıldız</span>
+              </Label>
             </div>
-            - Kırmızı 6 Yıldız
-          </Button>
+            <div className="flex items-center space-x-2 border-b-2">
+              <RadioGroupItem
+                value="30"
+                id="option-three"
+                onClick={(e: any) => {
+                  setValue(e.target.value);
+                  setPanda(parseInt(e.target.value));
+                }}
+                checked={value === '30'}
+                className="w-6 h-6"
+              />
+              <Label htmlFor="option-three" className="text-lg font-bold flex">
+                <div className="flex">
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                  <Star className="text-red-500" width={20} height={20} />
+                </div>
+                <span>- Kırmızı 6 Yıldız</span>
+              </Label>
+            </div>
+          </RadioGroup>
         </div>
       </CardContent>
     </Card>

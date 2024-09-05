@@ -88,7 +88,7 @@ function Felaketzede({ setKarakter, karakter }: any) {
           title={'April'}
           image={'/April.png'}
           btnTitle={'5 Yıldız Yaptım.'}
-          deger={5}
+          deger={8}
         />
         <FelaketzedeItem
           setKarakter={setKarakter}
@@ -96,7 +96,7 @@ function Felaketzede({ setKarakter, karakter }: any) {
           title={'Leonardo'}
           image={'/Leonardo.png'}
           btnTitle={'5 Yıldız Yaptım.'}
-          deger={5}
+          deger={8}
         />
         <FelaketzedeItem
           setKarakter={setKarakter}
@@ -104,7 +104,7 @@ function Felaketzede({ setKarakter, karakter }: any) {
           title={'Raphael'}
           image={'/Raphael.png'}
           btnTitle={'5 Yıldız Yaptım.'}
-          deger={5}
+          deger={8}
         />
       </CardContent>
     </Card>

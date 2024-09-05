@@ -15,7 +15,7 @@ import { Check, X } from 'lucide-react';
 function Evrim({ setHesap, hesap }: any) {
   const [btnClick, setBtnClick] = useState(false);
   return (
-    <Card className="w-full">
+    <Card className="w-full mb-2 rounded-xl">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2">
         <CardTitle>Evrimleştirde 40 level ödülünü aldın mı ?</CardTitle>
         {/* <CardDescription>Card Description</CardDescription> */}

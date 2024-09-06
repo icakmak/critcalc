@@ -11,9 +11,9 @@ const FelaketzedeItem = ({ setKarakter, karakter, title, deger, btnTitle, image,
         <Image src={image} width={60} height={60} alt="" className=" rounded-xl " />
       </div>
       <div className="flex flex-col w-full">
-        <div className="flex items-center gap-2 lg:flex-row xs:flex-col">
-          <span className="text-xl font-bold my-2 lg:text-right xs:text-center">{title}</span>
-          <span className="text-muted text-sm"> {btnTitle}</span>
+        <div className="flex items-center gap-2 lg:flex-row xs:flex-col lg:justify-between xs:justify-center">
+          <span className="text-xl font-bold my-1">{title} </span>
+          <span className="text-muted text-sm mb-1"> {btnTitle}</span>
         </div>
         <Button
           variant="outline"

@@ -17,10 +17,10 @@ function Panda({ setPanda, panda }: any) {
   const [value, setValue] = useState('0');
   return (
     <Card className="w-full mb-2 rounded-xl">
-      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2">
-        <CardTitle>Panda Uyandırdın mı ?</CardTitle>
+      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
+        <CardTitle className="text-lg p-2 font-Nunito font-bold">Panda Uyandırdın mı ?</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-row">
+      <CardContent className="flex flex-row p-1">
         <div className="p-2 rounded-xl lg:w-40 sm:w-1/4">
           <Image
             src={'/Master_Yang.png'}
@@ -59,11 +59,14 @@ function Panda({ setPanda, panda }: any) {
                 checked={value === '5'}
                 className="w-6 h-6"
               />
-              <Label htmlFor="option-one" className="text-lg font-bold flex">
-                <div className="flex">
+              <Label
+                htmlFor="option-one"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+              >
+                <div className="flex justify-center items-center">
                   <Star className="text-red-500" />
                 </div>
-                <span>- Kırmızı 1 Yıldız</span>
+                <span>Kırmızı 1 Yıldız</span>
               </Label>
             </div>
             <div className="flex items-center space-x-2 border-b-2 ">
@@ -77,14 +80,17 @@ function Panda({ setPanda, panda }: any) {
                 checked={value === '15'}
                 className="w-6 h-6"
               />
-              <Label htmlFor="option-two" className="text-lg font-bold flex">
-                <div className="flex">
+              <Label
+                htmlFor="option-two"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+              >
+                <div className="flex justify-center items-center">
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                 </div>
-                <span>- Kırmızı 4 Yıldız</span>
+                <span>Kırmızı 4 Yıldız</span>
               </Label>
             </div>
             <div className="flex items-center space-x-2 border-b-2">
@@ -98,8 +104,11 @@ function Panda({ setPanda, panda }: any) {
                 checked={value === '30'}
                 className="w-6 h-6"
               />
-              <Label htmlFor="option-three" className="text-lg font-bold flex">
-                <div className="flex">
+              <Label
+                htmlFor="option-three"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+              >
+                <div className="flex justify-center items-center">
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
@@ -107,7 +116,7 @@ function Panda({ setPanda, panda }: any) {
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                 </div>
-                <span>- Kırmızı 6 Yıldız</span>
+                <span>Kırmızı 6 Yıldız</span>
               </Label>
             </div>
           </RadioGroup>

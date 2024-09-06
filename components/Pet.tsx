@@ -18,11 +18,13 @@ function Pet({ setPet, pet, setEPet }: any) {
 
   return (
     <Card className="w-full mb-2 rounded-xl">
-      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2">
-        <CardTitle>Pet Motivasyon Becerisi ?</CardTitle>
+      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
+        <CardTitle className="text-lg p-2 font-Nunito font-bold">
+          Pet Motivasyon Becerisi ?
+        </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-row justify-center items-center">
-        <div className="p-2 rounded-xl lg:w-40 sm:w-1/4">
+      <CardContent className="flex flex-row justify-center items-center p-1">
+        <div className="p-1 rounded-xl lg:w-40 sm:w-1/4 xs:w-2/6 bg-red-100">
           <Image
             src={'/petcrit.png'}
             width={120}
@@ -32,8 +34,8 @@ function Pet({ setPet, pet, setEPet }: any) {
           />
         </div>
 
-        <div className="flex lg:w-full sm:w-3/4 flex-col gap-2 ">
-          <RadioGroup defaultValue="option-zero">
+        <div className="flex lg:w-full sm:w-3/4 xs:w-4/6 flex-col gap-2">
+          <RadioGroup defaultValue="option-zero" className=" w-full">
             <div className="flex items-center space-x-2 border-b-2">
               <RadioGroupItem
                 value="0"

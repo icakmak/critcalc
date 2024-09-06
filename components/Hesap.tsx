@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hesap = ({ evrim, panda, pet, karakter, koleksiyon }: any) => {
   return (
-    <div className="w-full gap-2 p-2 m-2">
+    <div className="w-full gap-2 p-2 m-2 font-Nunito">
       <table className="w-full">
         <thead className="font-bold">
           <tr className="border-b my-2">

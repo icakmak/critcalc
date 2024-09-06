@@ -6,10 +6,12 @@ function Felaketzede({ setKarakter, karakter }: any) {
   const [btnClick, setBtnClick] = useState(false);
   return (
     <Card className="w-full mb-2 rounded-xl">
-      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2">
-        <CardTitle>Felaketzede Seviye Kritik</CardTitle>
+      <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
+        <CardTitle className="text-lg p-2 font-Nunito font-bold">
+          Felaketzede Seviye Kritik
+        </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-2">
+      <CardContent className="flex flex-col gap-2 p-1">
         <FelaketzedeItem
           setKarakter={setKarakter}
           karakter={karakter}

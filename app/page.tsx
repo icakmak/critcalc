@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <main className="py-2 gap-2  ">
-      <h1 className="text-center text-3xl p-2 my-4 font-bold font-NunitoBold border-b-2 w-full">
+      <h1 className="text-center text-3xl p-2 my-4 font-bold font-Nunito border-b-2 w-full">
         Character Critic Rate Calculate
       </h1>
       {/* Hesap ve Evrim */}
@@ -49,6 +49,11 @@ export default function Home() {
         <div className="w-full lg:w-1/2 sm:w-full xs:w-full">
           <Kolleksiyon setKoleksiyon={setKoleksiyon} koleksiyon={koleksiyon} />
         </div>
+      </div>
+      <div className="flex justify-center items-center my-5">
+        <h1 className="text-xl font-bold w-full text-center">
+          Yardımları için <span className="text-red-500">KARACA</span> ya teşekkür ederiz.
+        </h1>
       </div>
     </main>
   );

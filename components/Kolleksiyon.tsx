@@ -17,118 +17,144 @@ function Kolleksiyon({ setKoleksiyon, koleksiyon }: any) {
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Eski Tıp Kitabı'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/eski_tip.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Şans Tılsımı'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/sans_tilsimi.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Bilim İnsanının Güncesi'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/bilim_insani.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Efsaneler Tableti'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/efsaneler_tableti.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Göz Kamaştırıcı Tüy'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/goz_kamastirici.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Plazma Kılıç'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/plazma_kilic.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Altın Boynuz'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/altin_boynuz.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={5}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Kadim Bilgelik Kitabı'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/kadim_bilgelik.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Yıldızlar Arası Geçiş Matirisi'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/yildizlar_arasi.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Başka Dünya Anahtarı'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/baska_dunya.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Yıldız Çekirdeği Elması'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/yildiz_cekirdegi.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Ömürlük Kum Saati'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/omurluk_kumsaati.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
         <FelaketzedeItem
           setKarakter={setKoleksiyon}
           karakter={koleksiyon}
           title={'Gerçeği Gören Göz'}
-          image={'/Master_Yang.png'}
+          image={'/collectibles/gercegi_goren.png'}
           btnTitle={'Kırmızı 3 Yıldız'}
           deger={10}
           star={true}
+          width={80}
+          height={80}
         />
       </CardContent>
     </Card>

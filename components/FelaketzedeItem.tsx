@@ -3,12 +3,22 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Check, Minus, Plus, Star, X } from 'lucide-react';
 
-const FelaketzedeItem = ({ setKarakter, karakter, title, deger, btnTitle, image, star }: any) => {
+const FelaketzedeItem = ({
+  setKarakter,
+  karakter,
+  title,
+  deger,
+  btnTitle,
+  image,
+  star,
+  width = 60,
+  height = 60,
+}: any) => {
   const [btnClick, setBtnClick] = useState(false);
   return (
     <div className="w-full flex justify-around gap-2 items-center border border-orange-400 p-2 rounded-xl font-Nunito">
       <div className=" rounded-xl h-20 w-20 flex justify-center items-center p-0">
-        <Image src={image} width={60} height={60} alt="" className=" rounded-xl " />
+        <Image src={image} width={width} height={height} alt="" className=" rounded-xl " />
       </div>
       <div className="flex flex-col w-full">
         <div className="flex items-center gap-2 lg:flex-row xs:flex-col lg:justify-between xs:justify-center">

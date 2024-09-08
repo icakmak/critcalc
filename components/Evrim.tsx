@@ -15,7 +15,7 @@ import { Check, Minus, Plus, X } from 'lucide-react';
 function Evrim({ setEvrim, evrim }: any) {
   const [btnClick, setBtnClick] = useState(false);
   return (
-    <Card className="w-full mb-2 rounded-xl">
+    <Card className="w-full mb-2 rounded-xl p-2">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
         <CardTitle className="text-lg p-2 font-Nunito font-bold">
           Evrimleştirde 40 level ödülünü aldın mı ?

@@ -50,8 +50,8 @@ export default function Home() {
           <Kolleksiyon setKoleksiyon={setKoleksiyon} koleksiyon={koleksiyon} />
         </div>
       </div>
-      <div className="flex justify-center items-center my-5">
-        <h1 className="text-xl font-bold w-full text-center">
+      <div className="flex justify-center items-center my-5 border-t-2 p-2">
+        <h1 className="text-xl  w-full text-center font-Nunito font-bold">
           Yardımları için <span className="text-red-500">KARACA</span> ya teşekkür ederiz.
         </h1>
       </div>

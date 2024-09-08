@@ -16,7 +16,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 function Panda({ setPanda, panda }: any) {
   const [value, setValue] = useState('0');
   return (
-    <Card className="w-full mb-2 rounded-xl">
+    <Card className="w-full mb-2 rounded-xl p-2">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
         <CardTitle className="text-lg p-2 font-Nunito font-bold">Panda Uyandırdın mı ?</CardTitle>
       </CardHeader>
@@ -44,7 +44,7 @@ function Panda({ setPanda, panda }: any) {
                 checked={value === '0'}
                 className="w-6 h-6"
               />
-              <Label htmlFor="option-zero" className="text-lg font-bold ">
+              <Label htmlFor="option-zero" className="text-lg font-bold font-Nunito px-2">
                 Uyandırmadım.
               </Label>
             </div>
@@ -61,12 +61,12 @@ function Panda({ setPanda, panda }: any) {
               />
               <Label
                 htmlFor="option-one"
-                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2  font-Nunito"
               >
-                <div className="flex justify-center items-center">
+                <span className="mb-1">Kırmızı 1 Yıldız</span>
+                <div className="flex items-center mb-1 ">
                   <Star className="text-red-500" />
                 </div>
-                <span>Kırmızı 1 Yıldız</span>
               </Label>
             </div>
             <div className="flex items-center space-x-2 border-b-2 ">
@@ -82,15 +82,15 @@ function Panda({ setPanda, panda }: any) {
               />
               <Label
                 htmlFor="option-two"
-                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2  font-Nunito"
               >
-                <div className="flex justify-center items-center">
+                <span className="mb-1">Kırmızı 4 Yıldız</span>
+                <div className="flex mb-1">
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                 </div>
-                <span>Kırmızı 4 Yıldız</span>
               </Label>
             </div>
             <div className="flex items-center space-x-2 border-b-2">
@@ -106,9 +106,10 @@ function Panda({ setPanda, panda }: any) {
               />
               <Label
                 htmlFor="option-three"
-                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2"
+                className="w-full text-lg font-bold flex lg:flex-row xs:flex-col lg:justify-between xs:justify-center px-2 font-Nunito"
               >
-                <div className="flex justify-center items-center">
+                <span className="mb-1">Kırmızı 6 Yıldız</span>
+                <div className="flex mb-1">
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
@@ -116,7 +117,6 @@ function Panda({ setPanda, panda }: any) {
                   <Star className="text-red-500" width={20} height={20} />
                   <Star className="text-red-500" width={20} height={20} />
                 </div>
-                <span>Kırmızı 6 Yıldız</span>
               </Label>
             </div>
           </RadioGroup>

@@ -1,17 +1,10 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Minus, Plus, Star } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+
+import { Star } from 'lucide-react';
 
 function Panda({ setPanda, panda }: any) {
   const [value, setValue] = useState('0');
@@ -125,5 +118,4 @@ function Panda({ setPanda, panda }: any) {
     </Card>
   );
 }
-
 export default Panda;

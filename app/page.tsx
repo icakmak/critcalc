@@ -16,13 +16,13 @@ export default function Home() {
   const [koleksiyon, setKoleksiyon] = useState(0);
 
   return (
-    <main className="py-2 gap-2  ">
+    <main className="py-2 gap-2">
       <h1 className="text-center text-3xl p-2 my-4 font-bold font-Nunito border-b-2 w-full">
-        Character Critic Rate Calculate
+        Karakter Kritik Oranı Hesaplama
       </h1>
       {/* Hesap ve Evrim */}
       <div className="flex lg:flex-row sm:flex-col xs:flex-col mb-2 gap-2">
-        <div className="lg:w-1/2 sm:w-full xs:w-full flex justify-center items-center border rounded-xl ">
+        <div className="lg:w-1/2 sm:w-full xs:w-full flex justify-center items-center border rounded-xl">
           <Hesap
             evrim={evrim}
             panda={panda}
@@ -51,8 +51,8 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center items-center my-5 border-t-2 p-2">
-        <h1 className="text-xl  w-full text-center font-Nunito font-bold">
-          Yardımları için <span className="text-red-500">KARACA</span> ya teşekkür ederiz.
+        <h1 className="text-xl w-full text-center font-Nunito font-bold">
+          Yardımları için <span className="text-red-500">KARACA</span>'ya teşekkür ederiz.
         </h1>
       </div>
     </main>

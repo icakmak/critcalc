@@ -54,11 +54,7 @@ function Pet({ setPet }: any) {
                       : ''
                   }`}
                 >
-                  {option.color && (
-                    <div className={`bg-${option.color}-500 rounded-xl w-8 h-8`}></div>
-
-                    // <div className="bg-red-500 rounded-xl w-8 h-8"></div>
-                  )}
+                  <div className={`bg-${option.color}-500 rounded-xl w-8 h-8`}></div>
                   {option.label}
                 </Label>
               </div>

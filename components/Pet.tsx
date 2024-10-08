@@ -7,7 +7,13 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 function Pet({ setPet }: any) {
   const [value, setValue] = useState('0');
-
+  const liste = [
+    { id: 'A', value: '0', label: 'Kullanmıyorum', color: 'gray' },
+    { id: 'B', value: '3', label: 'Mor +3%', color: 'purple' },
+    { id: 'C', value: '4', label: 'Sarı +4%', color: 'yellow' },
+    { id: 'D', value: '5', label: 'Kırmızı +5%', color: 'red' },
+  ];
+  console.log(liste);
   return (
     <Card className="w-full mb-2 rounded-xl p-2">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
@@ -28,12 +34,7 @@ function Pet({ setPet }: any) {
 
         <div className="flex lg:w-full sm:w-3/4 xs:w-4/6 flex-col gap-2">
           <RadioGroup defaultValue="option-zero" className="w-full">
-            {[
-              { id: 'A', value: '0', label: 'Kullanmıyorum', color: '' },
-              { id: 'B', value: '3', label: 'Mor +3%', color: 'purple' },
-              { id: 'C', value: '4', label: 'Sarı +4%', color: 'yellow' },
-              { id: 'D', value: '5', label: 'Kırmızı +5%', color: 'red' },
-            ].map((option) => (
+            {liste.map((option) => (
               <div key={option.id} className="flex items-center space-x-2 border-b-2 p-1">
                 <RadioGroupItem
                   value={option.value}
@@ -55,6 +56,8 @@ function Pet({ setPet }: any) {
                 >
                   {option.color && (
                     <div className={`bg-${option.color}-500 rounded-xl w-8 h-8`}></div>
+
+                    // <div className="bg-red-500 rounded-xl w-8 h-8"></div>
                   )}
                   {option.label}
                 </Label>

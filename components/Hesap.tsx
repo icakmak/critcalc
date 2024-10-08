@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hesap = ({ evrim, panda, pet, karakter, koleksiyon }: any) => {
-  const toplamKritik = evrim + panda + pet + karakter + koleksiyon;
+const Hesap = ({ evrim, panda, pet, karakter, koleksiyon, eldiven }: any) => {
+  const toplamKritik = evrim + panda + pet + karakter + koleksiyon + eldiven;
 
   const KritikSatiri = ({ baslik, deger }: { baslik: string; deger: number }) => (
     <tr className="border-b my-2">
@@ -13,10 +13,10 @@ const Hesap = ({ evrim, panda, pet, karakter, koleksiyon }: any) => {
   );
 
   return (
-    <div className="w-full gap-2 p-2 m-2 font-Nunito">
+    <div className="w-full p-4 font-Nunito  h-full">
       <table className="w-full">
         <thead className="font-bold">
-          <tr className="border-b my-2">
+          <tr className="border-b">
             <td className="w-3/4">Kritik Tablosu</td>
             <td className="w-1/4 text-right">Yüzde</td>
           </tr>
@@ -27,11 +27,12 @@ const Hesap = ({ evrim, panda, pet, karakter, koleksiyon }: any) => {
           <KritikSatiri baslik="Pet" deger={pet} />
           <KritikSatiri baslik="Karakter" deger={karakter} />
           <KritikSatiri baslik="Koleksiyon" deger={koleksiyon} />
+          <KritikSatiri baslik="Eldiven" deger={eldiven} />
         </tbody>
       </table>
-      <div className="flex justify-between items-center border-t p-2 mt-4">
+      <div className="flex justify-between items-center border-t ">
         <h1 className="text-xl font-bold">Toplam</h1>
-        <h1 className="text-5xl font-bold text-red-500">{toplamKritik}%</h1>
+        <h1 className="text-3xl font-bold text-red-500">{toplamKritik}%</h1>
       </div>
     </div>
   );

@@ -6,10 +6,11 @@ import Felaketzede from '@/components/Felaketzede';
 import { useEffect, useState } from 'react';
 import Kolleksiyon from '@/components/Kolleksiyon';
 import Hesap from '@/components/Hesap';
-
+import Eldiven from '@/components/Eldiven';
 export default function Home() {
   const [hesap, setHesap] = useState(0);
   const [evrim, setEvrim] = useState(0);
+  const [eldiven, setEldiven] = useState(0);
   const [panda, setPanda] = useState(0);
   const [pet, setPet] = useState(0);
   const [karakter, setKarakter] = useState(0);
@@ -22,17 +23,21 @@ export default function Home() {
       </h1>
       {/* Hesap ve Evrim */}
       <div className="flex lg:flex-row sm:flex-col xs:flex-col mb-2 gap-2">
-        <div className="lg:w-1/2 sm:w-full xs:w-full flex justify-center items-center border rounded-xl">
+        <div className="lg:w-1/3 sm:w-full xs:w-full flex justify-center items-center border rounded-xl h-68">
           <Hesap
             evrim={evrim}
             panda={panda}
             pet={pet}
             karakter={karakter}
             koleksiyon={koleksiyon}
+            eldiven={eldiven}
           />
         </div>
-        <div className="lg:w-1/2 sm:w-full xs:w-full">
+        <div className="lg:w-1/3 sm:w-full xs:w-full h-68">
           <Evrim setEvrim={setEvrim} evrim={evrim} />
+        </div>
+        <div className="lg:w-1/3 sm:w-full xs:w-full h-68">
+          <Eldiven setEldiven={setEldiven} eldiven={eldiven} />
         </div>
       </div>
 

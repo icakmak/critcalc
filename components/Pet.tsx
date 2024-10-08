@@ -4,38 +4,38 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Ratio } from 'lucide-react';
 
 function Pet({ setPet }: any) {
   const [value, setValue] = useState('0');
   const liste = [
-    { id: 'A', value: '0', label: 'Kullanmıyorum', color: 'gray' },
-    { id: 'B', value: '3', label: 'Mor +3%', color: 'purple' },
-    { id: 'C', value: '4', label: 'Sarı +4%', color: 'yellow' },
-    { id: 'D', value: '5', label: 'Kırmızı +5%', color: 'red' },
+    { id: 'A', deger: '0', label: 'Kullanmıyorum', color: 'gray-500', ratio: 'bg-gray-500' },
+    { id: 'B', deger: '3', label: 'Mor +3%', color: 'purple-500', ratio: 'bg-purple-500' },
+    { id: 'C', deger: '4', label: 'Sarı +4%', color: 'yellow-500', ratio: 'bg-yellow-500' },
+    { id: 'D', deger: '5', label: 'Kırmızı +5%', color: 'red-500', ratio: 'bg-red-500' },
   ];
 
   const PetSelect = ({ option }: any) => {
-    const { id, value, label, color } = option;
+    const { id, deger, label, color, ratio } = option;
 
     return (
       <div key={id} className="flex items-center space-x-2 border-b-2 p-1">
         <RadioGroupItem
-          value={value}
+          value={deger}
           id={id}
           onClick={(e: any) => {
             setValue(e.target.value);
             setPet(parseInt(e.target.value));
           }}
-          checked={value === value}
+          checked={value === deger}
           className="w-6 h-6"
         />
         <Label
           htmlFor={id}
-          className={`text-lg font-bold ${
-            color ? `text-${color}-500 flex gap-2 justify-center items-center` : ''
-          }`}
+          className={`text-lg font-bold text-${color} flex gap-2 justify-center items-center`}
         >
-          <div className={`bg-${color}-500 rounded-xl w-8 h-8`}></div>
+          <Ratio className={`${ratio} rounded-xl w-8 h-8`} />
+
           {label}
         </Label>
       </div>

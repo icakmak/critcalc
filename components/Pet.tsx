@@ -13,7 +13,35 @@ function Pet({ setPet }: any) {
     { id: 'C', value: '4', label: 'Sarı +4%', color: 'yellow' },
     { id: 'D', value: '5', label: 'Kırmızı +5%', color: 'red' },
   ];
-  console.log(liste);
+
+  const PetSelect = ({ option }: any) => {
+    const { id, value, label, color } = option;
+
+    return (
+      <div key={id} className="flex items-center space-x-2 border-b-2 p-1">
+        <RadioGroupItem
+          value={value}
+          id={id}
+          onClick={(e: any) => {
+            setValue(e.target.value);
+            setPet(parseInt(e.target.value));
+          }}
+          checked={value === value}
+          className="w-6 h-6"
+        />
+        <Label
+          htmlFor={id}
+          className={`text-lg font-bold ${
+            color ? `text-${color}-500 flex gap-2 justify-center items-center` : ''
+          }`}
+        >
+          <div className={`bg-${color}-500 rounded-xl w-8 h-8`}></div>
+          {label}
+        </Label>
+      </div>
+    );
+  };
+
   return (
     <Card className="w-full mb-2 rounded-xl p-2">
       <CardHeader className="text-center bg-orange-400 rounded-xl mb-2 h-10 flex justify-center items-center">
@@ -35,29 +63,7 @@ function Pet({ setPet }: any) {
         <div className="flex lg:w-full sm:w-3/4 xs:w-4/6 flex-col gap-2">
           <RadioGroup defaultValue="option-zero" className="w-full">
             {liste.map((option) => (
-              <div key={option.id} className="flex items-center space-x-2 border-b-2 p-1">
-                <RadioGroupItem
-                  value={option.value}
-                  id={option.id}
-                  onClick={(e: any) => {
-                    setValue(e.target.value);
-                    setPet(parseInt(e.target.value));
-                  }}
-                  checked={value === option.value}
-                  className="w-6 h-6"
-                />
-                <Label
-                  htmlFor={option.id}
-                  className={`text-lg font-bold ${
-                    option.color
-                      ? `text-${option.color}-500 flex gap-2 justify-center items-center`
-                      : ''
-                  }`}
-                >
-                  <div className={`bg-${option.color}-500 rounded-xl w-8 h-8`}></div>
-                  {option.label}
-                </Label>
-              </div>
+              <PetSelect key={option.id} option={option} />
             ))}
           </RadioGroup>
         </div>

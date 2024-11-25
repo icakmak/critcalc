@@ -12,16 +12,29 @@ function Kolleksiyon({ setKoleksiyon, koleksiyon }: any) {
     { title: 'Göz Kamaştırıcı Tüy', image: '/collectibles/goz_kamastirici.png', deger: 5 },
     { title: 'Plazma Kılıç', image: '/collectibles/plazma_kilic.png', deger: 5 },
     { title: 'Altın Boynuz', image: '/collectibles/altin_boynuz.png', deger: 5 },
+    {
+      title: 'Hidrolik Palet',
+      image: '/collectibles/HidrolikPalet.png',
+      deger: 5,
+    },
+    {
+      title: 'İnsan Üstü Hap',
+      image: '/collectibles/Insanustuhap.png',
+      deger: 5,
+    },
     { title: 'Kadim Bilgelik Kitabı', image: '/collectibles/kadim_bilgelik.png', deger: 10 },
     {
       title: 'Yıldızlar Arası Geçiş Matirisi',
       image: '/collectibles/yildizlar_arasi.png',
       deger: 10,
     },
+
     { title: 'Başka Dünya Anahtarı', image: '/collectibles/baska_dunya.png', deger: 10 },
     { title: 'Yıldız Çekirdeği Elması', image: '/collectibles/yildiz_cekirdegi.png', deger: 10 },
     { title: 'Ömürlük Kum Saati', image: '/collectibles/omurluk_kumsaati.png', deger: 10 },
     { title: 'Gerçeği Gören Göz', image: '/collectibles/gercegi_goren.png', deger: 10 },
+    { title: 'Boyut Perdesi', image: '/collectibles/Boyutperdesi.png', deger: 10 },
+    { title: 'Zihinsel Senkron Kaskı', image: '/collectibles/Zihinselsenkron.png', deger: 10 },
   ];
 
   return (

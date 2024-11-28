@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Minus, Plus } from 'lucide-react';
 
-function Eldiven({ setEldiven, eldiven }: any) {
+function Eldiven({ setEldiven, eldiven, toplamKritik }: any) {
   const [btnClick, setBtnClick] = useState(false);
   return (
     <Card className="w-full rounded-xl p-2 h-full">
@@ -21,8 +21,16 @@ function Eldiven({ setEldiven, eldiven }: any) {
           variant="outline"
           className="w-full rounded-xl"
           onClick={() => {
-            setEldiven(eldiven + (!btnClick ? +30 : -30));
-            setBtnClick(!btnClick);
+            console.log(toplamKritik);
+            if (toplamKritik <= 69) {
+              alert(
+                'Kritik Oranınız en az 70% olmalıdır. Eğer kritik oranınız 70% den düşükse eldivenin özelliğini kullanamazsınız !',
+              );
+              return;
+            } else {
+              setEldiven(eldiven + (!btnClick ? +30 : -30));
+              setBtnClick(!btnClick);
+            }
           }}
         >
           {!btnClick ? (

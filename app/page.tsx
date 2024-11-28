@@ -16,6 +16,10 @@ export default function Home() {
   const [karakter, setKarakter] = useState(0);
   const [koleksiyon, setKoleksiyon] = useState(0);
 
+  useEffect(() => {
+    const toplamKritik = evrim + panda + pet + karakter + koleksiyon + eldiven;
+    setHesap(toplamKritik);
+  }, [evrim, panda, pet, karakter, koleksiyon, eldiven]);
   return (
     <main className="py-2 gap-2">
       <h1 className="text-center text-3xl p-2 my-4 font-bold font-Nunito border-b-2 w-full">
@@ -31,13 +35,14 @@ export default function Home() {
             karakter={karakter}
             koleksiyon={koleksiyon}
             eldiven={eldiven}
+            //setHesap={setHesap}
           />
         </div>
         <div className="lg:w-1/3 sm:w-full xs:w-full h-68">
           <Evrim setEvrim={setEvrim} evrim={evrim} />
         </div>
         <div className="lg:w-1/3 sm:w-full xs:w-full h-68">
-          <Eldiven setEldiven={setEldiven} eldiven={eldiven} />
+          <Eldiven setEldiven={setEldiven} eldiven={eldiven} toplamKritik={hesap} />
         </div>
       </div>
 

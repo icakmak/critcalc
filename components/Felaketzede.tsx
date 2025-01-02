@@ -16,6 +16,9 @@ function Felaketzede({ setKarakter, karakter }: any) {
     { title: 'April', image: '/April.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
     { title: 'Leonardo', image: '/Leonardo.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
     { title: 'Raphael', image: '/Raphael.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
+    { title: 'Donatello', image: '/donatello.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
+    { title: 'Michelangelo', image: '/michelangelo.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
+    { title: 'Splinter', image: '/splinter.png', btnTitle: '5 Yıldız Yaptım.', deger: 8 },
   ];
 
   return (
